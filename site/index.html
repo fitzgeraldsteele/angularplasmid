@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/css" />
+        <style>
+            #p1 {border:1px solid #ccc}
+        </style>
+    </head>
+    <body>
+        <plasmid id="p1" sequencelength='1000'>
+            <plasmidtrack radius='75' style='fill:#f0f0f0;stroke:#ccc'>
+           <a href="http://www.example.com" target="_top"><tracklabel text='pUIC' style='font-size:25px;font-weight:bold'></tracklabel></a>
+                
+               
+                <trackmarker id='sec' start="40" end="85" style="fill:#fc0" data-content="Awesome content">
+                <markerlabel text="MCS" vadjust="-40"/>
+              
+            </trackmarker>
+            </plasmidtrack>
+        </plasmid>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src='../dist/angularplasmid.complete.min.js'></script>
+        <script type="text/javascript">
+            $(function() {
+                $('body').popover({
+                    selector: '#sec'
+                });
+                
+            });
+            
+        </script>
+    </body>
+</html>
